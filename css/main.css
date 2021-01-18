@@ -1,0 +1,151 @@
+
+/* COMMON 공통 CSS */
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.inner{
+    max-width: 1050px; 
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative; 
+}
+a{
+    color: #4c4c4c;
+    font-size: 12px;
+    text-decoration: none;
+    letter-spacing: -.3px;
+}
+button{
+    border: none;
+    width: 36px;
+    height: 36px;
+    background-color: transparent
+}
+  
+
+/* HEADER CSS */
+
+.section .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.section .nav a img{
+    width: 163px;
+    height: 22px;
+}
+.section .nav .user-menu {
+    display: flex;
+}
+.section .nav .user-menu .link-menu{
+    padding: 0 10px;
+}
+.section .nav .user-menu li .link-menu::after{
+    content: "";
+    float: right;
+    width: 1px;
+    height: 13px;
+    margin-top: 4px;
+    background-color: #d8d8d8;
+}
+.section .nav .user-menu .menu-center{
+    padding: 10px;
+}
+.section .nav .user-menu .menu-center::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 18px;
+    width: 8px;
+    height: 5px;
+    background: url(https://res.kurly.com/pc/ico/1908/ico_down_8x5.png) no-repeat 0 0;
+}
+.section .nav .user-menu .menu__sub{
+    display: none;
+    position: absolute;
+    width: 90px;
+    right: 0;
+    padding: 3px 9px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    background-color: #fff; 
+}
+.section .nav .user-menu .menu__sub li a{
+    line-height: 24px;
+}
+.section .logo{
+    position: relative;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+}
+.section .logo img{
+    position: absolute;
+    width: 103px;
+    height: 79px; 
+    top: -25px;
+}
+.section .gnb-menu{
+    display: flex;
+    align-items: center;
+}
+.section .gnb-menu .ico{
+    display: block;
+    width: 16px;
+    height: 14px;
+    background: url(https://res.kurly.com/pc/service/common/1908/ico_gnb_all_off.png) no-repeat;
+}
+.section .gnb-menu .gnb__list{
+    display: flex;
+}
+.section .gnb-menu .gnb__list li{
+    
+}
+.section .gnb-menu .gnb__list li a{
+    font-size: 16px;
+    color: #333;
+}
+.section .gnb-menu .side_search{
+   
+}
+#search{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+#search input{
+    width: 238px;
+    height: 36px;
+    padding: 0 50px 0 20px;
+    border: 1px solid #f7f7f6;
+    border-radius: 18px;
+    background-color: #f7f7f7;
+}
+#search button{
+    position: absolute;
+}
+#search .res-btn{
+    right: 25px;
+}
+#search .sear-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 15px;
+}
+#search .sear-btn img{
+    width: 30px;
+    height: 30px;
+}
+.section .gnb-menu .location-btn{
+    background-image: url(https://res.kurly.com/pc/ico/2008/ico_delivery_setting.svg?ver=1);
+}
+.section .gnb-menu .cart_btn{
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: url(https://res.kurly.com/pc/service/common/2011/ico_cart.svg) no-repeat 50% 50%;
+}

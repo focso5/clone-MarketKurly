@@ -1,16 +1,11 @@
 
 /* COMMON 공통 CSS */
 
-.clearfix::after{
-    content: "";
-    clear: both;
-    display: block;
+body::-webkit-scrollbar{
+    display: none;
 }
-.inner{
-    max-width: 1050px; 
-    margin: 0 auto;
-    box-sizing: border-box;
-    position: relative; 
+section{
+    position: relative;
 }
 a{
     color: #4c4c4c;
@@ -20,10 +15,28 @@ a{
 }
 button{
     border: none;
+    outline: none;
     width: 36px;
     height: 36px;
-    background-color: transparent
+    background-color: transparent;
+    cursor: pointer;
 }
+input{
+    outline: none;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.inner{
+    position: relative; 
+    max-width: 1050px; 
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
   
 
 /* HEADER CSS */
@@ -32,6 +45,7 @@ button{
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+    box-sizing: border-box;
 }
 .section .nav a img{
     width: 163px;
@@ -42,6 +56,7 @@ button{
 }
 .section .nav .user-menu .link-menu{
     padding: 0 10px;
+    box-sizing: border-box;
 }
 .section .nav .user-menu li .link-menu::after{
     content: "";
@@ -50,9 +65,11 @@ button{
     height: 13px;
     margin-top: 4px;
     background-color: #d8d8d8;
+    box-sizing: border-box;
 }
 .section .nav .user-menu .menu-center{
     padding: 10px;
+    box-sizing: border-box;
 }
 .section .nav .user-menu .menu-center::before{
     content: "";
@@ -69,6 +86,7 @@ button{
     width: 90px;
     right: 0;
     padding: 3px 9px;
+    box-sizing: border-box;
     margin: 10px 0;
     border: 1px solid #ddd;
     background-color: #fff; 
@@ -89,27 +107,46 @@ button{
     top: -25px;
 }
 .section .gnb-menu{
+    /* position: fixed;  */
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+    background-color: #fff; 
+    border-bottom: 1px solid #e5e5e5;
+}
+.section .gnb-menu .inner{
+    display: flex;
+}
+.section .gnb-menu .gnb--left,
+.section .gnb-menu .gnb--right{
     display: flex;
     align-items: center;
 }
-.section .gnb-menu .ico{
+.section .gnb-menu .gnb--left{
+    flex-grow: 1;
+}
+.section .gnb-menu .gnb--left .ico{
     display: block;
     width: 16px;
     height: 14px;
+    padding-right: 15px; 
     background: url(https://res.kurly.com/pc/service/common/1908/ico_gnb_all_off.png) no-repeat;
 }
-.section .gnb-menu .gnb__list{
+.section .gnb-menu .gnb--left .gnb__list{
     display: flex;
 }
-.section .gnb-menu .gnb__list li{
-    
+.section .gnb-menu .gnb--left .gnb__list li{
+    padding-right: 3.63em;
+    box-sizing: border-box;
 }
-.section .gnb-menu .gnb__list li a{
+.section .gnb-menu .gnb--left .gnb__list li a span{
     font-size: 16px;
     color: #333;
+    line-height: 20px;
 }
-.section .gnb-menu .side_search{
-   
+.section .gnb-menu .gnb--right .side_search{
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 #search{
     display: flex;
@@ -120,6 +157,7 @@ button{
     width: 238px;
     height: 36px;
     padding: 0 50px 0 20px;
+    box-sizing: border-box;
     border: 1px solid #f7f7f6;
     border-radius: 18px;
     background-color: #f7f7f7;
@@ -140,12 +178,108 @@ button{
     width: 30px;
     height: 30px;
 }
-.section .gnb-menu .location-btn{
+.section .gnb-menu .gnb--right .location-btn{
     background-image: url(https://res.kurly.com/pc/ico/2008/ico_delivery_setting.svg?ver=1);
 }
-.section .gnb-menu .cart_btn{
+.section .gnb-menu .gnb--right .cart_btn{
     display: block;
     width: 36px;
     height: 36px;
+    padding-left: 20px;
+    box-sizing: border-box;
     background: url(https://res.kurly.com/pc/service/common/2011/ico_cart.svg) no-repeat 50% 50%;
+}
+
+
+/* MAIN-VISUA */
+.main-visua .main__img{
+    position: relative; 
+    height: 484px; 
+    background: url(https://res.kurly.com/images/event/join/200115/pc/img_main.jpg) no-repeat 50% 0;
+}
+.main-visua .main__img .inner{
+    height: 484px;
+}
+.main-visua .main__img .main__btn{
+    position: absolute; 
+    top: 60%;
+    width: 300px;   
+    text-align: center;
+
+}
+.main-visua .main__img .main__btn .title{
+    display: flex;
+    align-items: center; 
+    background: #5f0080;
+    border-radius: 30px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: 1px 10px 15px #9b9898;
+}
+.main-visua .main__img .main__btn .title span{
+    color: #fff;
+    font-size: 22px;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+.main-visua .main__img .main__btn .title .next{  
+    text-indent: -9999px;
+    font-size: 0;
+}
+.main-visua .main__img .main__btn .title .next::before,
+.main-visua .main__img .main__btn .title .next::after{ 
+    content: '';
+    display: block;
+    height: 1px;
+    width: 12px;
+    background-color: #fff;
+}
+.main-visua .main__img .main__btn .title .next::before{
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+.main-visua .main__img .main__btn .title .next::after{
+    transform: rotate(-45deg);
+    transform-origin: 90% 0;
+}
+.main-visua .main-buttom{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(126,123,124,0.8);
+}
+.main-visua .main-buttom .inner{
+    
+}
+.main-visua .main-buttom .inner .buttom__btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-visua .main-buttom .inner .buttom__btn li{ 
+
+}
+.main-visua .main-buttom .inner .buttom__btn::before,
+.main-visua .main-buttom .inner .buttom__btn::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 100%;
+    top: 50%; 
+    transform: translateY(-50%);
+    background-color: #ddd;
+}
+.main-visua .main-buttom .inner .buttom__btn::before{
+    right: 0;
+}
+.main-visua .main-buttom .inner .buttom__btn ::after{
+    left: 0;
+}
+.main-visua .main-buttom .inner .buttom__btn li a{
+    display: block;
+    padding: 25px 60px;
+    color: #fff;
+    font-size: 1.5em;
+    letter-spacing: -2px;
 }

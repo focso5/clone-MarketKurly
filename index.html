@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,45 +9,83 @@
     <!-- css 초기화 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <!-- 반응형 -->
+    <link rel="stylesheet" media="all and (max-width: 1024px)" href="css/main_medium.css">
 </head>
+
 <body>
-    <header class="section inner">
-        <nav class="nav">
-            <a href=""><img src="https://res.kurly.com/pc/service/common/1908/delivery_190819.gif" alt=""></a>
-            <ul class="user-menu">
-                <li><a href="#" class="link-menu menu-join">회원가입</a></li>
-                <li><a href="#" class="link-menu">로그인</a></li>
-                <li><a href="#" class="menu-center">고객센터</a>
-                    <ul class="menu__sub">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">자주하는 질문</a></li>
-                        <li><a href="#">1:1 문의</a></li>
-                        <li><a href="#">상품 제안</a></li>
-                        <li><a href="#">에코포장 피드백</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div class="logo"><img src="https://res.kurly.com/images/marketkurly/logo/logo_x2.png" alt=""></div>
+    <header class="section">
+        <div class="inner">
+            <nav class="nav">
+                <a href=""><img src="https://res.kurly.com/pc/service/common/1908/delivery_190819.gif" alt=""></a>
+                <ul class="user-menu">
+                    <li><a href="#" class="link-menu menu-join">회원가입</a></li>
+                    <li><a href="#" class="link-menu">로그인</a></li>
+                    <li><a href="#" class="menu-center">고객센터</a>
+                        <ul class="menu__sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주하는 질문</a></li>
+                            <li><a href="#">1:1 문의</a></li>
+                            <li><a href="#">상품 제안</a></li>
+                            <li><a href="#">에코포장 피드백</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="logo"><img src="https://res.kurly.com/images/marketkurly/logo/logo_x2.png" alt=""></div>
+        </div>
         <div class="gnb-menu">
-            <span class="ico"></span>
-            <ul class="gnb__list">
-                <li><a href="#"><span>전체 카테고리</span></a></li>
-                <li><a href="#"><span>신상품</span></a></li>
-                <li><a href="#"><span>베스트</span></a></li>
-                <li><a href="#"><span>알뜰쇼핑</span></a></li>
-                <li><a href="#"><span>금주혜택</span></a></li>
-            </ul>
-            <div class="side_search">
-                <from id="search">
-                    <input type="text">
-                    <button type="reset" class="res-btn"></button>
-                    <button class="sear-btn"><img src="https://res.kurly.com/pc/service/common/1908/ico_search_x2.png" alt=""></button>
-                </from>
+            <div class="inner">
+                <div class="gnb--left">
+                    <span class="ico"></span>
+                    <ul class="gnb__list">
+                        <li><a href="#"><span>전체 카테고리</span></a></li>
+                        <li><a href="#"><span>신상품</span></a></li>
+                        <li><a href="#"><span>베스트</span></a></li>
+                        <li><a href="#"><span>알뜰쇼핑</span></a></li>
+                        <li><a href="#"><span>금주혜택</span></a></li>
+                    </ul>
+                </div>
+                <div class="gnb--right">
+                    <div class="side_search">
+                        <from id="search">
+                            <input type="text">
+                            <button type="reset" class="res-btn"></button>
+                            <button class="sear-btn"><img
+                                    src="https://res.kurly.com/pc/service/common/1908/ico_search_x2.png"
+                                    alt=""></button>
+                        </from>
+                    </div>
+                    <button class="location-btn"></button>
+                    <a href="#" class="cart_btn"></a>
+                </div>
             </div>
-            <button class="location-btn"></button>
-            <a href="#" class="cart_btn"></a>
         </div>
     </header>
+
+    <!-- MAIN_VISUA -->
+    <section class="main-visua">
+        <div class="main__img">
+            <div class="inner">
+                <div class="main__btn">
+                    <a href="#" class="title">
+                        <span>가입하고 혜택 받기</span>
+                        <span class="next">next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="main-buttom">
+            <div class="inner">
+                <ul class="buttom__btn">
+                    <li><a href="#">Welcome Gift</a></li>
+                    <li><a href="#">첫 구매 무료 배송</a></li>
+                    <li><a href="#">한달동안 5% 적립</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>

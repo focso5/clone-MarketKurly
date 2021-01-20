@@ -16,6 +16,17 @@
 
 <body>
     <header class="section">
+        <div class="bnr_header">
+            <a href="#">
+                <div class="inner">
+                    <span class="bnr_title">지금 가입하고 인기상품 <strong>100원</strong>에 받아가세요! </span>
+                    <span class="next"></span>
+                    <button class="bnr_btn">
+                        <span class="next">next</span>
+                    </button>
+                </div>
+            </a>
+        </div>
         <div class="inner">
             <nav class="nav">
                 <a href=""><img src="https://res.kurly.com/pc/service/common/1908/delivery_190819.gif" alt=""></a>
@@ -38,9 +49,13 @@
         <div class="gnb-menu">
             <div class="inner">
                 <div class="gnb--left">
-                    <span class="ico"></span>
+                    <button class="gnb-btn">
+                        <span class="ico"></span>
+                        <span class="ico"></span>
+                        <span class="ico"></span>
+                    </button>
                     <ul class="gnb__list">
-                        <li><a href="#"><span>전체 카테고리</span></a></li>
+                        <li id="gnb-all"><a href="#"><span>전체 카테고리</span></a></li>
                         <li><a href="#"><span>신상품</span></a></li>
                         <li><a href="#"><span>베스트</span></a></li>
                         <li><a href="#"><span>알뜰쇼핑</span></a></li>
@@ -60,6 +75,356 @@
                     <button class="location-btn"></button>
                     <a href="#" class="cart_btn"></a>
                 </div>
+
+                <!-- GNB_SUB -->
+                <div class="gnb__sub">
+                    <ul class="sub-menu">
+                        <li>
+                            <img src="img/icon_newyear_inactive_pc_2x.1609722514.png" alt="">
+                            <a href="">2021 설 선물세트</a>
+                        </li>
+                        <li>
+                            <img src="img/icon_veggies_inactive_pc_2x.1586324570.png" alt="">
+                            <a href="">채소</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_fruit_inactive_pc_2x.1568684150.png" alt="">
+                            <a href="">과일 · 견과 · 쌀</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_seafood_inactive_pc_2x.1568684352.png" alt="">
+                            <a href="">수산 · 해산 · 건어물</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_meat_inactive_pc_2x.1568684452.png" alt="">
+                            <a href="">정육 · 계란</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_side_inactive_pc_2x.1572243579.png" alt="">
+                            <a href="">국 · 반찬 · 메인요리</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_convenient_inactive_pc_2x.1572243542.png" alt="">
+                            <a href="">샐러드 · 간편식</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_sauce_inactive_pc_2x.1572243594.png" alt="">
+                            <a href="">면 · 양념 · 오일</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_snacks_inactive_pc_2x.1572243615.png" alt="">
+                            <a href="">생수 · 음료 · 우유 · 커피</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_cookie_inactive_pc.1610074008.png" alt="">
+                            <a href="">간식 · 과자 · 떡</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_deli_inactive_pc_2x.1568687352.png" alt="">
+                            <a href="">베이커리 · 치즈 · 델리</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_health_inactive_pc_2x.1574645922.png" alt="">
+                            <a href="">건강식품</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_living_inactive_pc_2x.1588814089.png" alt="">
+                            <a href="">생활용품 · 리빙</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_beauty_inactive_pc_2x.1588750188.png" alt="">
+                            <a href="">뷰티 · 바디케어</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_kitchen_inactive_pc_2x.1574646457.png" alt="">
+                            <a href="">주방용품</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_electronic__inactive_pc_2x.1574417978.png" alt="">
+                            <a href="">가전제품</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_kids_inactive_pc_2x.1568687537.png" alt="">
+                            <a href="">베이비 · 키즈</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/icon_pet_inactive_pc_2x.1587442293.png" alt="">
+                            <a href="">반려동물</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/ico_recommend_v2.jpg" alt="">
+                            <a href="">컬리의 추천</a>
+                            <ul class="sub-menu__in">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <ul class="sub-menu__in">
+                    <li><a href="">--카테고리별--</a></li>
+                    <li><a href="">홍삼 · 즙 · 건강식품</a></li>
+                    <li><a href="">정육 · 가공육 · 건육</a></li>
+                    <li><a href="">수산 · 건어물 · 젓갈</a></li>
+                    <li><a href="">과일 · 견과 · 곡류</a></li>
+                    <li><a href="">디저트 · 한과 · 차 · 커피</a></li>
+                    <li><a href="">면 · 양념 · 오일 · 캔류</a></li>
+                    <li><a href="">생활 · 주망 · 뷰티</a></li>
+                    <li><a href="">---가격대별---</a></li>
+                    <li><a href="">20만원 이상</a></li>
+                    <li><a href="">10-20만원</a></li>
+                    <li><a href="">5-10만원</a></li>
+                </ul>
+                
             </div>
         </div>
     </header>
@@ -70,7 +435,7 @@
             <div class="inner">
                 <div class="main__btn">
                     <a href="#" class="title">
-                        <span>가입하고 혜택 받기</span>
+                        <span class="main-title">가입하고 혜택 받기</span>
                         <span class="next">next</span>
                     </a>
                 </div>

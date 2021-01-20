@@ -1,8 +1,8 @@
 
 /* COMMON 공통 CSS */
 
-body::-webkit-scrollbar{
-    display: none;
+body{
+    overflow-x: hidden;
 }
 section{
     position: relative;
@@ -12,6 +12,7 @@ a{
     font-size: 12px;
     text-decoration: none;
     letter-spacing: -.3px;
+    
 }
 button{
     border: none;
@@ -36,11 +37,73 @@ input{
     margin: 0 auto;
     box-sizing: border-box;
 }
+.next{  
+    text-indent: -9999px;
+    font-size: 0;
+}
+.next::before,
+.next::after{ 
+    content: '';
+    display: block;
+    height: 1px;
+    width: 12px;
+    background-color: #fff;
+}
+.next::before{
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+.next::after{
+    transform: rotate(-45deg);
+    transform-origin: 90% 0;
+}
 
   
 
 /* HEADER CSS */
 
+.section .bnr_header{
+    position: relative; 
+    height: 42px; 
+    background-color: #5f0080;
+}
+.section .bnr_header a{
+    color: #fff;
+    font-size: 14px;
+}
+.section .bnr_header a .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section .bnr_header a .inner .bnr_title{
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+.section .bnr_header a .inner .bnr_title + .next::before, 
+.section .bnr_header a .inner .bnr_title + .next::after{
+    width: 8px;
+    background: rgba(255,255,255,0.5);
+}
+.section .bnr_header a .inner .bnr_btn{
+    position: absolute;
+    top: 2.5px;
+    right: 0;
+}
+.section .bnr_header a .inner .bnr_btn .next::before, 
+.section .bnr_header a .inner .bnr_btn .next::after{
+    width: 15px;
+    background: rgba(255,255,255,0.5);
+}
+.section .bnr_header a .inner .bnr_btn .next::before{
+    transform-origin: 8% 900%;
+} 
+.section .bnr_header a .inner .bnr_btn .next::after{
+    transform-origin: -10% -900%;
+}
 .section .nav {
     display: flex;
     justify-content: space-between;
@@ -53,6 +116,9 @@ input{
 }
 .section .nav .user-menu {
     display: flex;
+}
+.section .nav .user-menu .menu-join{
+    color: #5f0080;
 }
 .section .nav .user-menu .link-menu{
     padding: 0 10px;
@@ -83,7 +149,8 @@ input{
 .section .nav .user-menu .menu__sub{
     display: none;
     position: absolute;
-    width: 90px;
+    z-index: 9999;
+    width: 10.2%;
     right: 0;
     padding: 3px 9px;
     box-sizing: border-box;
@@ -108,6 +175,7 @@ input{
 }
 .section .gnb-menu{
     /* position: fixed;  */
+    z-index: 9999;
     width: 100%;
     padding: 10px 0;
     box-sizing: border-box;
@@ -116,6 +184,7 @@ input{
 }
 .section .gnb-menu .inner{
     display: flex;
+    justify-content: space-between;
 }
 .section .gnb-menu .gnb--left,
 .section .gnb-menu .gnb--right{
@@ -123,21 +192,33 @@ input{
     align-items: center;
 }
 .section .gnb-menu .gnb--left{
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
-.section .gnb-menu .gnb--left .ico{
-    display: block;
-    width: 16px;
+.section .gnb-menu .gnb--left .gnb-btn{ 
+    width: 30px;
     height: 14px;
-    padding-right: 15px; 
-    background: url(https://res.kurly.com/pc/service/common/1908/ico_gnb_all_off.png) no-repeat;
 }
+.section .gnb-menu .gnb--left .gnb-btn .ico{
+    display: block;
+    width: 80%;
+    height: 2px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    background-color: #333;
+}
+.section .gnb-menu .gnb--left .gnb-btn:hover .ico{
+    background-color: #5f0080;
+}
+
 .section .gnb-menu .gnb--left .gnb__list{
     display: flex;
 }
 .section .gnb-menu .gnb--left .gnb__list li{
     padding-right: 3.63em;
     box-sizing: border-box;
+}
+.section .gnb-menu .gnb--left .gnb__list li:hover a span{
+    color: #5f0080;
 }
 .section .gnb-menu .gnb--left .gnb__list li a span{
     font-size: 16px;
@@ -179,6 +260,7 @@ input{
     height: 30px;
 }
 .section .gnb-menu .gnb--right .location-btn{
+    padding: 0 21px;
     background-image: url(https://res.kurly.com/pc/ico/2008/ico_delivery_setting.svg?ver=1);
 }
 .section .gnb-menu .gnb--right .cart_btn{
@@ -188,6 +270,49 @@ input{
     padding-left: 20px;
     box-sizing: border-box;
     background: url(https://res.kurly.com/pc/service/common/2011/ico_cart.svg) no-repeat 50% 50%;
+}
+
+
+/* GNB_SUB */
+.section .gnb-menu .gnb__sub{
+    width: 20%;
+    height: 540px;
+    position: absolute;
+    z-index: 9999;
+    top: 45px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    overflow: auto;
+}
+.section .gnb-menu .gnb__sub .sub-menu{
+    width: 100%;
+}
+.section .gnb-menu .gnb__sub .sub-menu > li{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.section .gnb-menu .gnb__sub .sub-menu > li img{
+    width: 25px;
+    padding-right: 10px;
+}
+.section .gnb-menu .gnb__sub .sub-menu > li > a,
+.section .gnb-menu .sub-menu__in > li > a{
+    font-size: 14px;
+    letter-spacing: -1.5px;
+    font-weight: 500;
+}
+.section .gnb-menu .sub-menu__in{
+    position: absolute;
+    z-index: 9999;
+    width: 20%;
+    left: 210px;
+    top: 47px;
+    background: #f7f7f7;
+}
+.section .gnb-menu .sub-menu__in > li{ 
+    padding: 10px 20px;
 }
 
 
@@ -208,39 +333,19 @@ input{
 
 }
 .main-visua .main__img .main__btn .title{
-    display: flex;
+    display: inline-flex;
     align-items: center; 
     background: #5f0080;
     border-radius: 30px;
-    padding: 20px 30px;
+    padding: 20px 40px;
     box-sizing: border-box;
     box-shadow: 1px 10px 15px #9b9898;
 }
-.main-visua .main__img .main__btn .title span{
+.main-visua .main__img .main__btn .title .main-title{
     color: #fff;
     font-size: 22px;
     padding: 0 5px;
     box-sizing: border-box;
-}
-.main-visua .main__img .main__btn .title .next{  
-    text-indent: -9999px;
-    font-size: 0;
-}
-.main-visua .main__img .main__btn .title .next::before,
-.main-visua .main__img .main__btn .title .next::after{ 
-    content: '';
-    display: block;
-    height: 1px;
-    width: 12px;
-    background-color: #fff;
-}
-.main-visua .main__img .main__btn .title .next::before{
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
-}
-.main-visua .main__img .main__btn .title .next::after{
-    transform: rotate(-45deg);
-    transform-origin: 90% 0;
 }
 .main-visua .main-buttom{
     position: absolute;

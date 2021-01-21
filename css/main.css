@@ -217,7 +217,10 @@ input{
     padding-right: 3.63em;
     box-sizing: border-box;
 }
-.section .gnb-menu .gnb--left .gnb__list li:hover a span{
+.section .gnb-menu .gnb--left .gnb__list li:hover a span,
+#gnb__sub .sub-menu > li:hover a,
+#sub-menu__in > li:hover a,
+.section .gnb-menu .location-sub p b{
     color: #5f0080;
 }
 .section .gnb-menu .gnb--left .gnb__list li a span{
@@ -274,7 +277,8 @@ input{
 
 
 /* GNB_SUB */
-.section .gnb-menu .gnb__sub{
+#gnb__sub{
+    display: none;
     width: 20%;
     height: 540px;
     position: absolute;
@@ -285,34 +289,130 @@ input{
     border-right: none;
     overflow: auto;
 }
-.section .gnb-menu .gnb__sub .sub-menu{
+#gnb__sub .sub-menu{
     width: 100%;
 }
-.section .gnb-menu .gnb__sub .sub-menu > li{
+#gnb__sub .sub-menu > li{
     display: flex;
     align-items: center;
     padding: 10px;
 }
-.section .gnb-menu .gnb__sub .sub-menu > li img{
+#gnb__sub .sub-menu > li img{
     width: 25px;
     padding-right: 10px;
 }
-.section .gnb-menu .gnb__sub .sub-menu > li > a,
-.section .gnb-menu .sub-menu__in > li > a{
+#gnb__sub .sub-menu > li > a,
+#sub-menu__in > li > a{
     font-size: 14px;
     letter-spacing: -1.5px;
     font-weight: 500;
 }
-.section .gnb-menu .sub-menu__in{
+
+/* SUB-MENU__IN */
+#sub-menu__in{
+    display: none;
     position: absolute;
     z-index: 9999;
     width: 20%;
+    height: 540px;
     left: 210px;
     top: 47px;
     background: #f7f7f7;
 }
-.section .gnb-menu .sub-menu__in > li{ 
-    padding: 10px 20px;
+#sub-menu__in > li{ 
+    padding: 14.5px 20px;
+}
+
+/* LOCATION-SUB */
+.section .gnb-menu .location-pop{
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    width: 26%;
+    right: 31px;
+    top: 37px;
+}
+.section .gnb-menu .location-pop .triangle-up{
+    position: absolute;
+    z-index: 9999;
+    width: 0;
+    height: 0;
+    right: 20px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+.section .gnb-menu .location-pop .triangle-up::before,
+.section .gnb-menu .location-pop .triangle-up::after{
+    content: '';
+    height: 1px;
+    width: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ddd;
+    transform: rotate(-44deg);
+    transform-origin: 96% 80%;
+}
+.section .gnb-menu .location-pop .triangle-up::after{
+    transform: rotate(-134deg);
+    transform-origin: 99% 30%;
+}
+.section .gnb-menu .location-pop .location-sub{ 
+    width: 100%;
+    position: absolute;
+    top: 9px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 15px;
+}
+.section .gnb-menu .location-pop .location-sub p{
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+.section .gnb-menu .location-pop .location-sub p b{
+    font-weight: bold;
+}
+.section .gnb-menu .location-pop .location-sub .location_btn{
+    display: flex;
+    justify-content: space-between;
+}
+.section .gnb-menu .location-pop .location-sub .location_btn span{
+    font-weight: 600;
+}
+.section .gnb-menu .location-pop .location-sub .location_btn .login{
+    background: #fff;
+    border-radius: 5px;
+    color: #5f0080;
+    border: 1px solid #5f0080;
+    padding: 10px 35px; 
+}
+.section .gnb-menu .location-pop .location-sub .location_btn .addr{
+    background: #5f0080;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 45px;
+    display: block;
+}
+.section .gnb-menu .location-pop .location-sub .location_btn .addr::before{
+    content: "";
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+}
+.section .gnb-menu .location-pop .location-sub .location_btn .addr::after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 5px;
+    background-color: #fff;
+    transform: rotate(50deg);
+    transform-origin: 150% 560%;
+}
+.section .gnb-menu .location-pop .location-sub .location_btn .addr span{
+    padding-left: 20px;
 }
 
 

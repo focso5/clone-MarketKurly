@@ -36,8 +36,8 @@
                 <ul class="user-menu">
                     <li><a href="#" class="link-menu menu-join">회원가입</a></li>
                     <li><a href="#" class="link-menu">로그인</a></li>
-                    <li><a href="#" class="menu-center">고객센터</a>
-                        <ul class="menu__sub">
+                    <li><a href="#" id="center" class="menu-center mouseOver">고객센터</a>
+                        <ul id="center-pop" class="menu__sub">
                             <li><a href="#">공지사항</a></li>
                             <li><a href="#">자주하는 질문</a></li>
                             <li><a href="#">1:1 문의</a></li>
@@ -58,7 +58,7 @@
                         <span class="ico"></span>
                     </button>
                     <ul class="gnb__list">
-                        <li id="gnb-all"><a href="#"><span>전체 카테고리</span></a></li>
+                        <li><a href="#"><span id="menuAll" class="mouseOver" >전체 카테고리</span></a></li>
                         <li><a href="#"><span>신상품</span></a></li>
                         <li><a href="#"><span>베스트</span></a></li>
                         <li><a href="#"><span>알뜰쇼핑</span></a></li>
@@ -75,12 +75,12 @@
                                     alt=""></button>
                         </from>
                     </div>
-                    <button class="location-btn"></button>
+                    <button id="location" class="location-btn mouseOver"></button>
                     <a href="#" class="cart_btn"></a>
                 </div>
 
                 <!-- GNB_SUB -->
-                <div id="gnb__sub">
+                <div id="gnb-pop" class="gnb__sub">
                     <ul class="sub-menu">
                         <li>
                             <img src="img/icon_newyear_inactive_pc_2x.1609722514.png" alt="">
@@ -176,12 +176,12 @@
                     <li><a href="">5-10만원</a></li>
                 </ul>
                 <!-- LOCATION-SUB -->
-                <div class="location-pop">
+                <div id='loc-pop' class="location-pop">
                     <div class="triangle-up"></div>
                     <div class="location-sub">
                         <p><b>배송지를 등록</b>하고</br>
                         구매 가능한 상품을 확인하세요!</p>
-                        <div class="location_btn">
+                        <div class="location_btn mouseOver">
                             <a href="#" class="login"><span>로그인</span></a>
                             <a href="#" class="addr">
                                 <!-- <span class="glass"></span> -->
@@ -207,12 +207,34 @@
                 </div>
             </div>
         </div>
-        <div class="main-buttom">
+        <div class="main-bottom">
             <div class="inner">
-                <ul class="buttom__btn">
-                    <li><a href="#">Welcome Gift</a></li>
-                    <li><a href="#">첫 구매 무료 배송</a></li>
+                <ul class="bottom__btn">
+                    <li><a href="#">Welcome Gift</a></li> 
+                    <li class="btn-line"><a href="#">첫 구매 무료 배송</a></li> 
                     <li><a href="#">한달동안 5% 적립</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENTS_ROW -->
+    <section class="contents_row">
+        <div class="inner">
+            <div class="con-title">
+                <span>혜택</span>
+                <div class="box">
+                    <p>01</p>
+                </div>
+            </div>
+            <h1>Welcome Gift</h1>
+            <p class="jonin-title">회원 가입 시, 아래 상품 중 <br>
+            원하는 상품을 100원부터 구입할 수 있습니다.</p>
+            <div class="con-content">
+                <p>※ 신규회원 이벤트 상품 구매 유의 사항</p>
+                <ul>
+                    <li><span>·가입 후 3일 이내, 이벤트 상품 외 1만원 이상 주문 시 구매 가능합니다.</span></li>
+                    <li><span>·이벤트 상품은 조기 품절될 수 있으며, 품절 시 이벤트에서 제외됩니다.</span></li>
                 </ul>
             </div>
         </div>
